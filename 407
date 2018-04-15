@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n,i;
+	cin >> n;
+	char c;
+	while(n--)
+	{
+		string s="GCV";
+		cin >> i;
+		while(i--)
+		{
+			c=s[0];
+			s[0]=s[2];
+			s[2]=s[1];
+			s[1]=c;
+		}
+		cout << s << endl;
+	}
+	return 0;
+}
