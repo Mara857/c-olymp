@@ -1,0 +1,31 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int main() {
+	int n,a;
+	n=2;
+	vector <int> v;
+	while(n--)
+	{
+		cin >> a;
+		v.push_back(a);
+	}
+	sort(v.begin(),v.end());
+	a=v[0];
+	while(a)
+	{
+		n=1;
+		for(auto k:v)
+		{
+			if(k%a!=0)
+				n=0;
+		}
+		if(n==1)
+			break;
+		a--;
+	}
+	cout << a;
+	return 0;
+}
