@@ -1,0 +1,14 @@
+#include"iostream.h"
+
+int main(){
+       long int h = 0, w = 0, l = 0, k = 0 ;
+       cin >> h >> w >> l >> k;
+       long int a = (h * w) * l;
+       if(a%k!=0)
+         a = (a / k) + 1;
+       else
+         a = a / k;
+       cout << a <<"\n";
+  return 0;
+
+}
